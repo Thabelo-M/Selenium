@@ -34,7 +34,6 @@ def test_signup_popup(driver):
     popup = driver.find_element(By.ID, "promo-popup")
     popup_message = driver.find_element(By.ID, "promo-popup-message").text
 
-
     assert popup.is_displayed(), "Sign-UP popup did not display."
     assert "success" in popup_message.lower(), f"Unexpected message: {popup_message}"
 
