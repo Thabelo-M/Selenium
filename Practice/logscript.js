@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const validEmail = "Selenium25@gmail.com";
     const validPassword = "Y0uMade1t&3&&";
 
-    // Function to show popup
+    // Function to show popup message
     function showPopupMessage(message, isSuccess) {
         popupMessage.textContent = message;
         popup.style.display = "block";
@@ -36,6 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
         // === Credential check ===
         if (email === validEmail && password === validPassword) {
             showPopupMessage("You have successfully logged in!", true);
+
+            // Redirect to Dashboard.html after successful login
+            setTimeout(function() {
+                window.location.href = "Dashboard.html"; // Redirect to Dashboard
+            }, 1500); // Wait 1.5 seconds to let the user see the success message
         } else {
             showPopupMessage("Incorrect details!", false);
         }
