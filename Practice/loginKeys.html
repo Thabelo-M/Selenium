@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    .popup {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 40%;
+      background-color: white;
+      border: 1px solid #333;
+      padding: 20px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <h2>Login Form</h2>
+  <label>Email:</label>
+  <input type="text" id="email"><br><br>
+  <label>Password:</label>
+  <input type="password" id="password"><br><br>
+  <button id="loginButton">Login</button>
+
+  <!-- Popup -->
+  <div id="login-popup" class="popup">
+    <p id="login-popup-message"></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    document.getElementById("loginButton").addEventListener("click", function () {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const popup = document.getElementById("login-popup");
+      const message = document.getElementById("login-popup-message");
+
+      if (email === "keys@yahoo.com" && password === "###key13%st") {
+        message.innerText = "Login successful!";
+      } else {
+        message.innerText = "Invalid credentials.";
+      }
+
+      popup.style.display = "block";
+    });
+
+    function closePopup() {
+      document.getElementById("login-popup").style.display = "none";
+    }
+  </script>
+</body>
+</html>

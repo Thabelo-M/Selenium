@@ -1,0 +1,7 @@
+Keyword,LocatorType,LocatorValue,Data
+open_browser,,,file:///C:/Users/ThabeloMuthuvhukuma/OneDrive - Praesignis/Desktop/Selenium_Practice/Selenium/Practice/loginKeys.html
+enter_text,id,email,keys@yahoo.com
+enter_text,id,password,###key13%st
+click,id,loginButton,
+wait,,,3
+verify_popup_message,,,Login successful!
